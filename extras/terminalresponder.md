@@ -3,44 +3,39 @@ layout: plugin
 
 id: terminalresponse
 title: OctoPrint-TerminalResponse
-description: TODO
+description: Monitors terminal for a regular expression and allows you to respond with your own commands.
 author: Xiao Jin
 license: AGPLv3
 
-# TODO
-date: today's date in format YYYY-MM-DD, e.g. 2015-04-21
+# today's date in format YYYY-MM-DD, e.g.
+date: 2020-04-28
 
 homepage: https://github.com/xia0/OctoPrint-TerminalResponse
 source: https://github.com/xia0/OctoPrint-TerminalResponse
 archive: https://github.com/xia0/OctoPrint-TerminalResponse/archive/master.zip
 
-# TODO
 # Set this to true if your plugin uses the dependency_links setup parameter to include
-# library versions not yet published on PyPi. SHOULD ONLY BE USED IF THERE IS NO OTHER OPTION!
+# library versions not yet published on pypi. SHOULD ONLY BE USED IF THERE IS NO OTHER OPTION!
 #follow_dependency_links: false
 
-# TODO
 tags:
-- a list
-- of tags
-- that apply
-- to your plugin
-- (take a look at the existing plugins for what makes sense here)
+- regex
+- regular
+- expressions
+- gcode
+- command
+- commands
+- terminal
+- monitor
+- send
 
-# TODO
 screenshots:
-- url: url of a screenshot, /assets/img/...
-  alt: alt-text of a screenshot
-  caption: caption of a screenshot
-- url: url of another screenshot, /assets/img/...
-  alt: alt-text of another screenshot
-  caption: caption of another screenshot
-- ...
+- url: https://github.com/xia0/OctoPrint-TerminalResponse/raw/master/screenshots/01.png
+  alt: Plugin settings
+  caption: Plugin settings
 
-# TODO
-featuredimage: url of a featured image for your plugin, /assets/img/...
+featuredimage: https://github.com/xia0/OctoPrint-TerminalResponse/raw/master/screenshots/01.png
 
-# TODO
 # You only need the following if your plugin requires specific OctoPrint versions or
 # specific operating systems to function - you can safely remove the whole
 # "compatibility" block if this is not the case.
@@ -58,11 +53,11 @@ compatibility:
   # OctoPrint versions being supported.
 
   octoprint:
-  - 1.2.0
+  - 1.3.0
 
   # List of compatible operating systems
   #
-  # Valid values:
+  # Possible values:
   #
   # - windows
   # - linux
@@ -82,19 +77,18 @@ compatibility:
   - windows
   - macos
   - freebsd
-  
+
   # Compatible Python version
   #
   # Plugins should aim for compatibility for Python 2 and 3 for now, in which case the value should be ">=2.7,<4".
   #
-  # Plugins that only wish to support Python 3 should set it to ">=3,<4". 
+  # Plugins that only wish to support Python 3 should set it to ">=3,<4".
   #
   # If your plugin only supports Python 2 (worst case, not recommended for newly developed plugins since Python 2
   # is EOL), leave at ">=2.7,<3"
-  
-  python: ">=2.7,<3"
+
+  python: ">=2.7,<4"
 
 ---
 
-**TODO**: Longer description of your plugin, configuration examples etc. This part will be visible on the page at
-http://plugins.octoprint.org/plugin/terminalresponse/
+This plugin will monitor the terminal for regular expressions that you define. You can use parentheses to extract values from matches. You can then define commands to run in response to your regex matches and substitute the matches values to your liking.
