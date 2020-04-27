@@ -1,6 +1,6 @@
 # OctoPrint-TerminalResponse
 
-Monitors OctoPrint terminal for your defined regular expressions. When it detects a match, it will send your commands.
+Monitors OctoPrint terminal for your defined regular expressions. When it detects a match, it will send your commands. Code is based off [OctoPrint-ActionCommandsPlugin by benlye](https://github.com/benlye/OctoPrint-ActionCommandsPlugin).
 
 ## Setup
 
