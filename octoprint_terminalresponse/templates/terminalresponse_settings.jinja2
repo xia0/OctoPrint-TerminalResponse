@@ -1,0 +1,31 @@
+<h3>Regex response definitions</h3>
+<p>Place parentheses around values you want to isolate. Substitute these with <code>(1)</code>, <code>(2)</code> and so on... Write each command on a new line.</p>
+<p>Example: <code>T:([^\s]*)[^B]*B:([^\s]*)</code> and <code>M117 Extruder temp (1) Bed temp (2)</code>.
+<form class="form-horizontal">
+    <div class="row-fluid">
+        <div class="span4"><h4>regex</h4></div>
+        <div class="span6"><h4>Command</h4></div>
+        <div class="span1"><h4>Enable</h4></div>
+    </div>
+    <div data-bind="foreach: regex_definitions">
+        <div class="row-fluid" style="margin-bottom: 5px">
+            <div class="span4 input-prepend control-group" title="The action command which the printer will send">
+                <input type="text" class="span12 input-mini text-left" data-bind="value: regex">
+            </div>
+            <div class="span6 control-group" title="The gcode to send or command to execute. Separate multiple gcode commands with semi-colons.">
+                <textarea class="span14" data-bind="value: command"></textarea>
+            </div>
+            <div class="span1 control-group" title="Enable or disable this action command">
+                <input type="checkbox" data-bind="checked: enabled">
+            </div>
+            <div class="span1">
+                <a title="Remove Command Definition" class="btn btn-danger" data-bind="click: $parent.removeCommandDefinition"><i class="icon-trash"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="row-fluid">
+        <div class="offset11 span1">
+            <a title="Add Command Definition" class="btn btn-primary" data-bind="click: addCommandDefinition"><i class="icon-plus"></i></a>
+        </div>
+    </div>
+</form>
