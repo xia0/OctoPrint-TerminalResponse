@@ -1,0 +1,3 @@
+[octoprint.plugin]
+terminalresponse = octoprint_terminalresponse
+
