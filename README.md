@@ -11,4 +11,6 @@ or manually using this URL:
 
 ## Configuration
 
+![Plugin settings](https://raw.githubusercontent.com/xia0/OctoPrint-TerminalResponse/master/screenshots/01.png)
+
 Enter your regular expression on the left. Place values you would like to extract in parentheses. Enter your commands on the right with a new line for each command. Enter `(1)`, `(2)`, etc... to substitute your values.
