@@ -12,7 +12,7 @@ import octoprint.plugin
 import octoprint.settings
 
 __plugin_name__ = "Terminal Response"
-__plugin_version__ = "0.1"
+__plugin_version__ = "0.1.1"
 __plugin_pythoncompat__ = ">=2.7,<4"
 
 def __plugin_init__():
