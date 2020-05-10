@@ -11,6 +11,7 @@ import string
 import octoprint.plugin
 import octoprint.settings
 
+__plugin_name__ = "Terminal Response"
 __plugin_pythoncompat__ = ">=2.7,<4"
 
 def __plugin_init__():
