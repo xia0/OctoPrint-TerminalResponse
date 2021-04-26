@@ -93,7 +93,7 @@ class TerminalResponsePlugin(octoprint.plugin.TemplatePlugin,
 
                     # Do replacement for numbered matches
                     for i in range(1, len(m.groups())+1):
-                        command = string.replace(command, "("+str(i)+")", m.group(i))
+                        command = str.replace(command, "("+str(i)+")", m.group(i))
                     for split_line in command.splitlines():
                         self._logger.info("Sending command: " + split_line)
                         self._printer.commands(split_line)
